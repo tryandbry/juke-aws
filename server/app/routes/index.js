@@ -9,6 +9,9 @@ router.use('/albums', require('./albums'));
 router.use('/playlists', require('./playlists'));
 router.use('/songs', require('./songs'));
 router.use('/lyrics', require('./lyrics'));
+router.use('/healthcheck',function(req,res){
+  res.sendStatus(200);
+});
 
 // Make sure this is after all of
 // the registered routes!
